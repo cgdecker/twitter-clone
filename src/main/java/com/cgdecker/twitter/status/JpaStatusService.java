@@ -42,6 +42,6 @@ public class JpaStatusService implements StatusService {
   @Override
   public List<Status> getFollowedUserTimeline(User user, int firstResult, int maxResults) {
     return statusFinder.getMultiUserTimeline(
-        Sets.union(ImmutableSet.of(user), user.getFollowedUsers()), firstResult, maxResults);
+        Sets.union(ImmutableSet.of(user), user.getFollowing()), firstResult, maxResults);
   }
 }

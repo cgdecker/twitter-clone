@@ -1,7 +1,6 @@
 package com.cgdecker.twitter.web.actions;
 
 import com.cgdecker.twitter.user.UserSession;
-import com.cgdecker.twitter.web.PageBase;
 import com.cgdecker.twitter.user.RequiresLogin;
 import com.cgdecker.twitter.user.User;
 import com.cgdecker.twitter.user.UserService;

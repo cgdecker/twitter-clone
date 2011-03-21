@@ -4,6 +4,8 @@ import com.cgdecker.twitter.user.User;
 import com.cgdecker.twitter.user.UserSession;
 import com.google.sitebricks.rendering.EmbedAs;
 
+import javax.inject.Inject;
+
 /**
  * @author cgdecker@gmail.com (Colin Decker)
  */
@@ -12,7 +14,7 @@ public class UserFollowUnfollowBrick {
   private final UserSession userSession;
   private User user;
 
-  public UserFollowUnfollowBrick(UserSession userSession) {
+  @Inject public UserFollowUnfollowBrick(UserSession userSession) {
     this.userSession = userSession;
   }
 

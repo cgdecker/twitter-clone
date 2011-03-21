@@ -1,0 +1,16 @@
+<html>
+<body>
+
+@ShowIf(user.followers.empty)
+<p>
+  ${user.name} has no followers.
+</p>
+
+@ShowIf(!user.followers.empty)
+<div>
+  @UserList(users=user.followers)
+  <ul/>
+</div>
+
+</body>
+</html>

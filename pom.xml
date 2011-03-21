@@ -14,7 +14,7 @@
     <dependency>
       <groupId>com.google.sitebricks</groupId>
       <artifactId>sitebricks</artifactId>
-      <version>0.8.3</version>
+      <version>0.8.4-SNAPSHOT</version>
       <exclusions>
         <exclusion>
           <artifactId>guava</artifactId>

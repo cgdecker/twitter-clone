@@ -10,7 +10,6 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
@@ -33,9 +32,9 @@ public class User {
   @Type(type = "org.joda.time.contrib.hibernate.PersistentDateTime")
   private DateTime joinedDate;
 
-  @ManyToMany private Set<User> followedUsers = Sets.newHashSet();
+  @ManyToMany private Set<User> following = Sets.newHashSet();
 
-  @ManyToMany(mappedBy = "followedUsers", cascade = CascadeType.ALL)
+  @ManyToMany(mappedBy = "following", cascade = CascadeType.ALL)
   private Set<User> followers = Sets.newHashSet(); // inverse
 
   public User() {}
@@ -106,8 +105,8 @@ public class User {
     this.joinedDate = joinedDate;
   }
 
-  public Set<User> getFollowedUsers() {
-    return followedUsers;
+  public Set<User> getFollowing() {
+    return following;
   }
 
   public Set<User> getFollowers() {
@@ -119,15 +118,15 @@ public class User {
   }
 
   public void followUser(User user) {
-    followedUsers.add(user);
+    following.add(user);
   }
 
   public void unfollowUser(User user) {
-    followedUsers.remove(user);
+    following.remove(user);
   }
 
   public boolean isFollowing(User user) {
-    return followedUsers.contains(user);
+    return following.contains(user);
   }
 
   public boolean validatePassword(String password) {

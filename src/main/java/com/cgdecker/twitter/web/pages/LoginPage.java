@@ -1,5 +1,6 @@
 package com.cgdecker.twitter.web.pages;
 
+import com.cgdecker.twitter.messages.AppMessages;
 import com.cgdecker.twitter.user.UserSession;
 import com.cgdecker.twitter.user.LoginInfo;
 import com.cgdecker.twitter.user.User;
@@ -7,22 +8,26 @@ import com.cgdecker.twitter.user.UserService;
 import com.google.sitebricks.At;
 import com.google.sitebricks.http.Get;
 import com.google.sitebricks.http.Post;
+import com.google.sitebricks.rendering.Decorated;
 
 import javax.inject.Inject;
 
 /**
  * @author cgdecker@gmail.com (Colin Decker)
  */
-@At("/login")
-public class LoginPage {
+@At("/login") @Decorated
+public class LoginPage extends PageTemplate {
   private final UserService userService;
-  private final UserSession userSession;
 
   private final LoginInfo login = new LoginInfo();
 
-  @Inject public LoginPage(UserService userService, UserSession userSession) {
+  @Inject public LoginPage(UserService userService, UserSession userSession, AppMessages appMessages) {
+    super(userSession, appMessages);
     this.userService = userService;
-    this.userSession = userSession;
+  }
+
+  @Override public String getTitle() {
+    return "Login";
   }
 
   @Get public Object get() {
