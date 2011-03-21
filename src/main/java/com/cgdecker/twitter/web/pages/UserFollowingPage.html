@@ -1,20 +1,14 @@
 <html>
-<head>
-  <title>Twitter Clone - People ${user.username} is following</title>
-</head>
 <body>
 
-@Header
-<div/>
-
-@ShowIf(followedUsers.empty)
+@ShowIf(user.following.empty)
 <p>
   ${user.name} is not following anyone.
 </p>
 
-@ShowIf(!followedUsers.empty)
+@ShowIf(!user.following.empty)
 <div>
-  @UserList(users=followedUsers)
+  @UserList(users=user.following)
   <ul/>
 </div>
 

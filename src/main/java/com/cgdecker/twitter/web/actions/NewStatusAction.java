@@ -2,7 +2,6 @@ package com.cgdecker.twitter.web.actions;
 
 import com.cgdecker.twitter.common.Clock;
 import com.cgdecker.twitter.user.UserSession;
-import com.cgdecker.twitter.web.PageBase;
 import com.cgdecker.twitter.status.Status;
 import com.cgdecker.twitter.status.StatusService;
 import com.cgdecker.twitter.user.RequiresLogin;

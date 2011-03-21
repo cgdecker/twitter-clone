@@ -1,11 +1,5 @@
 <html>
-<head>
-  <title>Twitter Clone - ${user.username}</title>
-</head>
 <body>
-
-@Header
-<div/>
 
 <h3>${user.name}</h3>
 
@@ -13,8 +7,8 @@
 <span/>
 
 <ul>
-  <li><a href="/${user.username}/following">Following ${user.followedUsers.size()}</a></li>
-  <li><a href="/${user.username}/followers">Followers ${followers.size()}</a></li>
+  <li><a href="/${user.username}/following">Following ${user.following.size()}</a></li>
+  <li><a href="/${user.username}/followers">Followers ${user.followers.size()}</a></li>
 </ul>
 
 @Timeline(statuses=statuses)
