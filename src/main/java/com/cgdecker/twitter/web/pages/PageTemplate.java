@@ -11,11 +11,11 @@ import javax.inject.Inject;
  * @author cgdecker@gmail.com (Colin Decker)
  */
 @Show
-public abstract class PageBase {
+public abstract class PageTemplate {
   protected final UserSession userSession;
   protected final AppMessages appMessages;
 
-  @Inject protected PageBase(UserSession userSession, AppMessages appMessages) {
+  @Inject protected PageTemplate(UserSession userSession, AppMessages appMessages) {
     this.userSession = userSession;
     this.appMessages = appMessages;
   }

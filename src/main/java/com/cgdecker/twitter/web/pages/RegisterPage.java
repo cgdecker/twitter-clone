@@ -15,7 +15,7 @@ import javax.inject.Inject;
  * @author cgdecker@gmail.com (Colin Decker)
  */
 @At("/register") @Decorated
-public class RegisterPage extends PageBase {
+public class RegisterPage extends PageTemplate {
   private final UserService userService;
 
   private final User user = new User();

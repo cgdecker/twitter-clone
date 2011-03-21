@@ -9,15 +9,13 @@ import com.google.sitebricks.At;
 import com.google.sitebricks.http.Get;
 import com.google.sitebricks.rendering.Decorated;
 
-import java.util.Set;
-
 import javax.inject.Inject;
 
 /**
  * @author cgdecker@gmail.com (Colin Decker)
  */
 @At("/:username/following") @Decorated
-public class UserFollowingPage extends PageBase {
+public class UserFollowingPage extends PageTemplate {
   private final UserService userService;
 
   private User user;

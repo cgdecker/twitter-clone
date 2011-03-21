@@ -6,7 +6,6 @@ import com.cgdecker.twitter.status.StatusService;
 import com.cgdecker.twitter.user.User;
 import com.cgdecker.twitter.user.UserService;
 import com.cgdecker.twitter.user.UserSession;
-import com.google.inject.persist.Transactional;
 import com.google.sitebricks.At;
 import com.google.sitebricks.http.Get;
 import com.google.sitebricks.rendering.Decorated;
@@ -21,7 +20,7 @@ import javax.inject.Inject;
  * @author cgdecker@gmail.com (Colin Decker)
  */
 @At("/") @Decorated
-public class IndexPage extends PageBase {
+public class IndexPage extends PageTemplate {
   private final AppMessages messages;
   private final StatusService statusService;
 

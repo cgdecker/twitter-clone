@@ -16,7 +16,7 @@ import javax.inject.Inject;
  * @author cgdecker@gmail.com (Colin Decker)
  */
 @At("/login") @Decorated
-public class LoginPage extends PageBase {
+public class LoginPage extends PageTemplate {
   private final UserService userService;
 
   private final LoginInfo login = new LoginInfo();

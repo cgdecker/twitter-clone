@@ -19,7 +19,7 @@ import javax.inject.Inject;
  * @author cgdecker@gmail.com (Colin Decker)
  */
 @At("/:username") @Decorated
-public class UserPage extends PageBase {
+public class UserPage extends PageTemplate {
   private final UserService userService;
   private final StatusService statusService;
 
