@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Twitter Clone</title>
+</head>
+<body>
+
+@Header
+<div/>
+
+@ShowIf(!loggedIn)
+<p>
+  ${welcomeMessage}
+</p>
+
+@ShowIf(loggedIn)
+<div>
+  @StatusBox
+  <div/>
+
+  @Timeline(statuses=statuses)
+  <ul/>
+</div>
+
+</body>
+</html>

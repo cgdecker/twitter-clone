@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Twitter Clone - People follower ${user.username}</title>
+</head>
+<body>
+
+@Header
+<div/>
+
+@ShowIf(followers.empty)
+<p>
+  ${user.name} has no followers.
+</p>
+
+@ShowIf(!followers.empty)
+<div>
+  @UserList(users=followers)
+  <ul/>
+</div>
+
+</body>
+</html>

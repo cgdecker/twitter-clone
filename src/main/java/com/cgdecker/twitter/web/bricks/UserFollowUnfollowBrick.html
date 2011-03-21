@@ -1,0 +1,16 @@
+<html>
+<body>
+@ShowIf(allowFollowing)
+<span>
+  @ShowIf(!following)
+  <form action="/${user.username}/follow" method="post">
+    <input type="submit" value="Follow"/>
+  </form>
+
+  @ShowIf(following)
+  <form action="/${user.username}/unfollow" method="post">
+    <input type="submit" value="Unfollow"/>
+  </form>
+</span>
+</body>
+</html>

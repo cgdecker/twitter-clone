@@ -1,0 +1,11 @@
+<html>
+<body>
+<ul>
+  @Repeat(items=statuses, var="status")
+  <li>
+    <strong><a href="/${status.author.username}">${status.author.username}</a>:</strong> ${status.text}<br/>
+    <em>${status.postTime}</em>
+  </li>
+</ul>
+</body>
+</html>

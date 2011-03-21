@@ -1,0 +1,12 @@
+<html>
+<body>
+<ul>
+  @Repeat(items=users, var="user")
+  <li>
+    <span><a href="/${user.username}">${user.username}</a>
+    @FollowUnfollow(user=user)
+    <span/></span>
+  </li>
+</ul>
+</body>
+</html>
