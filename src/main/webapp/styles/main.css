@@ -1,0 +1,18 @@
+body {
+  background: #bbbbbb;
+}
+
+#headerBar {
+  background: #333333;
+  color: white;
+}
+
+#title {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+#headerBar a {
+  text-decoration: none;
+  color: #add8e6;
+}

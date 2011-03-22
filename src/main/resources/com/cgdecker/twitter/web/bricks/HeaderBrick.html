@@ -1,19 +1,25 @@
 <html>
 <body>
-@ShowIf(loggedIn)
-<div>
-  Logged in as <a href="/${user.username}">${user.firstName} ${user.lastName}</a> - <a href="/logout">Logout</a>
+
+<div id="headerBar">
+  <div id="title"><a href="/">${appName}</a></div>
+
+  <form action="/find" method="post">
+    <input type="text" name="username"/> <input type="submit" value="Find User"/>
+  </form>
+
+  @ShowIf(loggedIn)
+  <div>
+    Logged in as <a href="/${user.username}">${user.firstName} ${user.lastName}</a> - <a
+      href="/logout">Logout</a>
+  </div>
+
+  @ShowIf(!loggedIn)
+  <div>
+    Not logged in - <a href="/login">Login</a> or <a href="/register">Register</a>
+  </div>
+
 </div>
 
-@ShowIf(!loggedIn)
-<div>
-  Not logged in - <a href="/login">Login</a> or <a href="/register">Register</a>
-</div>
-
-<form action="/find" method="post">
-  <input type="text" name="username"/> <input type="submit" value="Find User"/>
-</form>
-
-<h1><a href="/">${appName}</a></h1>
 </body>
 </html>
