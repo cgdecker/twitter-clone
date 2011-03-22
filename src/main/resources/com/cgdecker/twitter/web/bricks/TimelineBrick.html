@@ -1,10 +1,17 @@
 <html>
 <body>
-<ul>
+<ul class="unstyled">
   @Repeat(items=statuses, var="status")
-  <li>
-    <strong><a href="/${status.author.username}">${status.author.username}</a>:</strong> ${status.text}<br/>
-    <em>${status.postTime}</em>
+  <li id="status-${status.id}" class="status">
+    <div class="status-author">
+      <a href="/${status.author.username}">${status.author.username}</a> <span class="user-name">${status.author.name}</span>
+    </div>
+    <div class="status-text">
+      ${status.text}
+    </div>
+    <div class="status-time">
+      ${status.postTime}
+    </div>
   </li>
 </ul>
 </body>

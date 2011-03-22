@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 public class AppConfig extends GuiceServletContextListener {
   private static final Logger log = LoggerFactory.getLogger(AppConfig.class);
 
+  // blah blah blah
   @Override protected Injector getInjector() {
     log.info("*** STARTING UP ***");
     return Guice.createInjector(new AppModule());

@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<h3>${user.name}</h3>
+<div class="content-header-label">${user.name}</div>
 
 @FollowUnfollow(user=user)
 <span/>
@@ -10,6 +10,8 @@
   <li><a href="/${user.username}/following">Following ${user.following.size()}</a></li>
   <li><a href="/${user.username}/followers">Followers ${user.followers.size()}</a></li>
 </ul>
+
+<div class="medium-header">Timeline</div>
 
 @Timeline(statuses=statuses)
 <ul/>

@@ -2,14 +2,17 @@
 <body>
 
 @ShowIf(!loggedIn)
-<p>
+<div>
+  <div class="content-header-label">Welcome to ${appName}!</div>
   ${welcomeMessage}
-</p>
+</div>
 
 @ShowIf(loggedIn)
 <div>
   @StatusBox
   <div/>
+
+  <div class="medium-header">Timeline</div>
 
   @Timeline(statuses=statuses)
   <ul/>
