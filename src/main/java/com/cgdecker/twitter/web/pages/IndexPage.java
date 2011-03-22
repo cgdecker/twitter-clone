@@ -24,8 +24,6 @@ public class IndexPage extends PageTemplate {
   private final AppMessages messages;
   private final StatusService statusService;
 
-  private static AtomicBoolean started = new AtomicBoolean(); // TODO: For testing... remove
-
   private List<Status> statuses;
 
   @Inject IndexPage(UserSession userSession, AppMessages messages, StatusService statusService) {
@@ -38,15 +36,7 @@ public class IndexPage extends PageTemplate {
     return "It's a Twitter clone!";
   }
 
-  @Get public void get(UserService userService) {
-    // TODO: For testing... remove
-    if (started.compareAndSet(false, true)) {
-      User colin = new User("cgdecker", "a", "Colin", "Decker", "cgdecker@gmail.com", new DateTime());
-      User jessica = new User("jnruse", "a", "Jessica", "Ruse", "jnruse@gmail.com", new DateTime());
-      userService.saveUser(colin);
-      userService.saveUser(jessica);
-    }
-
+  @Get public void get() {
     if (isLoggedIn()) {
       statuses = statusService.getFollowedUserTimeline(getCurrentUser(), 0, 100);
     }

@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+  font-size: 11pt;
+}
+
+a {
+  text-decoration: none;
+  color: #297ba2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#header {
+  background: #333;
+  color: white;
+  padding: 4px 12px 4px 12px;
+}
+
+#title {
+  font-size: 150%;
+  font-weight: bolder;
+  color: white;
+}
+
+.header-nav {
+  float: right;
+  vertical-align: middle;
+}
+
+#find-user {
+  float: left;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.login-status {
+  float: left;
+  padding-left: 1em;
+  line-height: 18pt;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.login-status a {
+  color: rgb(191, 237, 247);
+}
+
+#content {
+  margin: 1em;
+  width: 600px;
+}
+
+.status-box {
+  margin-bottom: 1em;
+}
+
+.status-box textarea {
+  font-size: 110%;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+.status-box button {
+  text-align: right;
+}
+
+.larger-button {
+  font-size: 100%;
+  padding: 4px;
+}
+
+.medium-header {
+  font-size: 140%;
+  font-weight: bold;
+  color: #555;
+}
+
+.content-header-label {
+  font-size: 140%;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.5em;
+}
+
+.unstyled {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.status {
+  border-bottom: 1pt dashed #555;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.status:hover {
+  background: #eee;
+}
+
+.status .status-author a {
+  font-size: 110%;
+}
+
+.status .status-author .user-name {
+  font-size: 90%;
+  color: #555;
+}
+
+.status .status-text {
+  font-size: 110%;
+  margin: 0.25em 0 0.25em 0;
+}
+
+.status .status-time {
+  font-size: 85%;
+  color: #555;
+}
