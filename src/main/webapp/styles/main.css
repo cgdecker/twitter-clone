@@ -87,13 +87,14 @@ a:hover {
 }
 
 .unstyled {
+  border-top: 1px dashed #555;
   list-style-type: none;
   padding-left: 0;
 }
 
 .status {
   border-bottom: 1pt dashed #555;
-  padding: 0.5em 0 0.5em 0;
+  padding: 0.5em;
 }
 
 .status:hover {
