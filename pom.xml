@@ -10,6 +10,12 @@
 
   <packaging>war</packaging>
 
+  <properties>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>com.google.sitebricks</groupId>
@@ -162,6 +168,22 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+
+  <name>Twitter Clone</name>
+  <description>A Twitter clone webapp for fun.</description>
+  <inceptionYear>2011</inceptionYear>
+
+  <url>http://github.com/cgdecker/twitter-clone</url>
+
+  <developers>
+    <developer>
+      <name>Colin Decker</name>
+      <email>cgdecker@gmail.com</email>
+      <roles>
+        <role>Owner</role>
+      </roles>
+    </developer>
+  </developers>
 
   <!-- Temporary until there's an 0.8.4 snapshot in the normal sitebricks repo -->
   <repositories>
