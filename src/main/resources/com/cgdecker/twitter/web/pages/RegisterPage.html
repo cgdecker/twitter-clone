@@ -1,29 +1,38 @@
 <html>
 <body>
 
-<div class="content-header-label">Register</div>
-<form action="/register" method="post">
+<h2 class="content-header-label">Register</h2>
+<form class="pretty-form" action="/register" method="post">
   <table>
     <tr>
-      <td>Username:</td><td><input type="text" name="user.username"/></td>
+      <td class="label-column"><label for="username">Username</label></td>
+      <td><input id="username" class="larger-text" type="text" name="user.username"/></td>
     </tr>
     <tr>
-      <td>Password:</td><td><input type="password" name="user.password"/></td>
+      <td class="label-column"><label for="password">Password</label></td>
+      <td><input id="password" class="larger-text" type="password" name="user.password"/></td>
     </tr>
     <tr>
-      <td>Repeat password:</td><td><input type="password" name="passwordRepeat"/></td>
+      <td class="label-column"><label for="password-repeat">Repeat Password</label></td>
+      <td><input id="password-repeat" class="larger-text" type="password" name="passwordRepeat"/></td>
     </tr>
     <tr>
-      <td>First name:</td><td><input type="text" name="user.firstName"/></td>
+      <td class="label-column"><label for="first-name">First Name</label></td>
+      <td><input id="first-name" class="larger-text" type="text" name="user.firstName"/></td>
     </tr>
     <tr>
-      <td>Last name:</td><td><input type="text" name="user.lastName"/></td>
+      <td class="label-column"><label for="last-name">Last Name</label></td>
+      <td><input id="last-name" class="larger-text" type="text" name="user.lastName"/></td>
     </tr>
     <tr>
-      <td>Email:</td><td><input type="text" name="user.email"/></td>
+      <td class="label-column"><label for="email">Email</label></td>
+      <td><input id="email" class="larger-text" type="text" name="user.email"/></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="larger-button" type="submit">Register</button></td>
     </tr>
   </table>
-  <button class="larger-button" type="submit">Register</button>
 </form>
 
 </body>
