@@ -163,4 +163,13 @@
     </dependency>
   </dependencies>
 
+  <!-- Temporary until there's an 0.8.4 snapshot in the normal sitebricks repo -->
+  <repositories>
+    <repository>
+      <id>cgdecker-snapshots</id>
+      <url>http://nexus.cgdecker.com/content/repositories/snapshots</url>
+      <snapshots/>
+    </repository>
+  </repositories>
+
 </project>
