@@ -14,7 +14,7 @@ import javax.persistence.EntityManager;
  * @author cgdecker@gmail.com (Colin Decker)
  */
 @Transactional
-public class JpaStatusService implements StatusService {
+class JpaStatusService implements StatusService {
   private final EntityManager entityManager;
   private final StatusFinder statusFinder;
 
