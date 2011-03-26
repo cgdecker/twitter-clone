@@ -8,6 +8,8 @@ import com.cgdecker.twitter.user.UserService;
 import com.cgdecker.twitter.user.UserSession;
 import com.google.inject.name.Named;
 import com.google.sitebricks.At;
+import com.google.sitebricks.headless.Reply;
+import com.google.sitebricks.headless.Service;
 import com.google.sitebricks.http.Get;
 import com.google.sitebricks.rendering.Decorated;
 
@@ -18,7 +20,7 @@ import javax.inject.Inject;
 /**
  * @author cgdecker@gmail.com (Colin Decker)
  */
-@At("/:username") @Decorated
+@At("/:username") @Decorated @Service
 public class UserPage extends PageTemplate {
   private final UserService userService;
   private final StatusService statusService;
@@ -37,9 +39,14 @@ public class UserPage extends PageTemplate {
     return user.getUsername();
   }
 
-  @Get public void get(@Named("username") String username) {
+  @Get public Object get(@Named("username") String username) {
     user = userService.getUserByName(username);
+    if (user == null) {
+      return notFound();
+    }
+
     statuses = statusService.getTimelineForUser(user, 0, 100);
+    return null;
   }
 
   public User getUser() {

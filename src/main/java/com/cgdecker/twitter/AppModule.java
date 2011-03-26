@@ -10,6 +10,8 @@ import com.google.inject.persist.PersistFilter;
 import com.google.inject.persist.jpa.JpaPersistModule;
 import com.google.sitebricks.SitebricksModule;
 import com.google.sitebricks.SitebricksServletModule;
+import com.google.sitebricks.binding.FlashCache;
+import com.google.sitebricks.binding.HttpSessionFlashCache;
 
 /**
  * @author cgdecker@gmail.com (Colin Decker)
@@ -22,11 +24,13 @@ class AppModule extends SitebricksModule {
             .addFinder(UserFinder.class)
             .addFinder(StatusFinder.class));
         filter("/*").through(PersistFilter.class);
+
       }
     };
   }
 
   @Override protected void configureSitebricks() {
+    bind(FlashCache.class).to(HttpSessionFlashCache.class);
     scan(getClass().getPackage());
     localize(AppMessages.class).usingDefault();
 
