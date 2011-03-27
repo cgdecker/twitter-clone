@@ -1,0 +1,38 @@
+<html>
+<body>
+
+<h2 class="content-header-label">Settings</h2>
+
+<form class="pretty-form" action="/settings" method="post">
+  <table>
+    <tr>
+      <td class="label-column"><label for="first-name">First Name</label></td>
+      <td><input id="first-name" class="larger-text" type="text" size="40" name="user.firstName" value="${user.firstName}"></td>
+    </tr>
+    <tr>
+      <td class="label-column"><label for="last-name">Last Name</label></td>
+      <td><input id="last-name" class="larger-text" type="text" size="40" name="user.lastName" value="${user.lastName}"></td>
+    </tr>
+    <tr>
+      <td class="label-column"><label for="email">Email</label></td>
+      <td><input id="email" class="larger-text" type="text" size="40" name="user.email" value="${user.email}"></td>
+    </tr>
+    <tr>
+      <td class="label-column"><label for="location">Location</label></td>
+      <td><input id="location" class="larger-text" type="text" size="40" name="user.location" value="${user.location}"></td>
+    </tr>
+    <tr>
+      <td class="label-column"><label for="about">About Me</label></td>
+      <td><textarea id="about" class="larger-text" cols="60" rows="4" name="user.about">${user.about}</textarea></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button class="larger-button" type="submit">Save</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>

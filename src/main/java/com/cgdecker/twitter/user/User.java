@@ -29,6 +29,9 @@ public class User {
 
   @Column(unique = true) private String email;
 
+  private String location;
+  private String about;
+
   @Type(type = "org.joda.time.contrib.hibernate.PersistentDateTime")
   private DateTime joinedDate;
 
@@ -99,6 +102,22 @@ public class User {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getLocation() {
+    return location;
+  }
+
+  public void setLocation(String location) {
+    this.location = location;
+  }
+
+  public String getAbout() {
+    return about;
+  }
+
+  public void setAbout(String about) {
+    this.about = about;
   }
 
   public void setJoinedDate(DateTime joinedDate) {

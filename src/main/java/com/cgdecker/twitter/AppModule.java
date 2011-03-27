@@ -2,11 +2,11 @@ package com.cgdecker.twitter;
 
 import com.cgdecker.twitter.common.CommonModule;
 import com.cgdecker.twitter.messages.AppMessages;
+import com.cgdecker.twitter.persist.KludgePersistFilter;
 import com.cgdecker.twitter.status.StatusFinder;
 import com.cgdecker.twitter.status.StatusModule;
 import com.cgdecker.twitter.user.UserFinder;
 import com.cgdecker.twitter.user.UserModule;
-import com.google.inject.persist.PersistFilter;
 import com.google.inject.persist.jpa.JpaPersistModule;
 import com.google.sitebricks.SitebricksModule;
 import com.google.sitebricks.SitebricksServletModule;
@@ -21,7 +21,8 @@ class AppModule extends SitebricksModule {
         install(new JpaPersistModule("hsqldb")
             .addFinder(UserFinder.class)
             .addFinder(StatusFinder.class));
-        filter("/*").through(PersistFilter.class);
+        filter("/*").through(KludgePersistFilter.class);
+
       }
     };
   }
